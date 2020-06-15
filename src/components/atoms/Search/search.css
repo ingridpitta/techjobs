@@ -1,0 +1,17 @@
+input {
+  max-width: 100vw;
+  width: 80%;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border: 0.5px solid #bebebe;
+  color: #bebebe;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 20px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #bebebe;
+  font-weight: normal;
+}

@@ -1,7 +1,8 @@
 .generalTemplate--container {
   max-width: 100vw;
   width: 100%;
-  background-color: #EDF6F5;
+  background-color: #edf6f5;
+  height: auto;
 }
 
 .generalTemplate--container > nav {
