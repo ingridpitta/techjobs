@@ -1,10 +1,11 @@
 import React from "react";
+import { MainTitle } from "../../atoms";
 import "./homeContent.css";
 
-const HomeContent = () => {
+const HomeContent = ({ title }) => {
   return (
     <main className="homeContent--container">
-      <h1>Home Content</h1>
+      <MainTitle title={title} />
     </main>
   );
 };

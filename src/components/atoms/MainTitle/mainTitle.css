@@ -1,0 +1,11 @@
+.mainTitle--container {
+  text-align: center;
+}
+
+.mainTitle--container > h1 {
+  color: #64babb;
+  font-weight: bold;
+  font-size: 68px;
+  padding: 150px 0;
+  margin: 0;
+}

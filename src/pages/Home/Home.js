@@ -7,13 +7,16 @@ class Home extends Component{
     constructor(){
         super();
 
-        this.state={}
+        this.state={
+            title:"TechJobs"
+        }
     }
 
     render(){
+        const {title} = this.state;
         return(
            <GeneralTemplate>
-            <HomeContent/>
+            <HomeContent title={title}/>
            </GeneralTemplate>
         )
     }

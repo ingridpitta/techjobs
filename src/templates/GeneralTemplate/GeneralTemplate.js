@@ -20,4 +20,4 @@ const GeneralTemplate = ({ children }) => {
   );
 };
 
-return GeneralTemplate;
+export default GeneralTemplate;
