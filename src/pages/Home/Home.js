@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { GeneralTemplate } from "../../templates";
 import { HomeContent } from "../../components/organisms";
+import data from "../../data.json";
 import "./home.css";
 
 class Home extends Component {
@@ -46,6 +47,7 @@ class Home extends Component {
           filters={filters}
           handleChange={this.handleChange}
           onClick={this.onClick}
+          cardsInfo={data}
         />
       </GeneralTemplate>
     );
