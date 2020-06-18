@@ -1,1 +1,45 @@
+.company--infos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
+.company--infos > img {
+  border-radius: 50%;
+  padding-right: 20px;
+  width: 120px;
+  height: auto;
+}
+
+.role--details > h3 {
+  color: #64babb;
+  font-size: 16px;
+  font-family: "Chivo", sans-serif;
+}
+
+.role--details > h2 {
+  color: #64babb;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details > h3 {
+  color: #bebebe;
+  font-family: "Chivo", sans-serif;
+  font-size: 14px;
+}
+
+.details > span {
+  border-radius: 50%;
+  background-color: #bebebe;
+  width: 5px;
+  height: 5px;
+}

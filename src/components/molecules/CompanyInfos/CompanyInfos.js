@@ -11,11 +11,11 @@ const CompanyInfos = ({
 }) => {
   return (
     <div className="company--infos">
-      <img src={logo} alt={`${company}-${logo}`} />
-      <div>
+      <img src={logo} alt={`${company}-logo`} />
+      <div className="role--details">
         <h3>{company}</h3>
         <h2>{position}</h2>
-        <div>
+        <div className="details">
           <h3>{postedAt}</h3>
           <span></span>
           <h3>{contract}</h3>

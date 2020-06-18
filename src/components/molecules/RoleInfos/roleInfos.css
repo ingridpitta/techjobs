@@ -1,1 +1,21 @@
+.role--infos {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.role--infos > div {
+  background-color: #edf6f5;
+  padding: 3px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.role--infos > div > h2 {
+  color: #64babb;
+  font-size: 14px;
+  margin: 0;
+  font-family: "Chivo", sans-serif;
+}

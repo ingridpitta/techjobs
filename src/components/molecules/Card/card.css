@@ -1,0 +1,15 @@
+.card--container {
+  width: 75%;
+  padding: 20px;
+  margin: 20px auto 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  border: none;
+  z-index: 2;
+  box-shadow: 0px 8px 10px rgba(100, 186, 187, 0.2);
+  cursor: pointer;
+}
