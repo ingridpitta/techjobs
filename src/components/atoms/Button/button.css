@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
   cursor: pointer;
+  font-family: "Chivo", sans-serif;
 }
 
 .searchBar--btn {
@@ -14,16 +15,19 @@ a {
   font-weight: bold;
   cursor: pointer;
   outline: none;
+  font-family: "Chivo", sans-serif;
 }
 
 .searchBar--btn:hover,
 .searchBar--btn:active {
   background-color: #498c8e;
+  font-family: "Chivo", sans-serif;
 }
 
 .confirm--btn {
   color: white;
   background-color: #64babb;
+  font-family: "Chivo", sans-serif;
   border-radius: 10px;
   border: none;
   padding: 10px 35px;
@@ -36,6 +40,7 @@ a {
 .cancel--btn {
   color: #64babb;
   background-color: #edf6f5;
+  font-family: "Chivo", sans-serif;
   border-radius: 10px;
   border: none;
   padding: 10px 35px;

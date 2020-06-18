@@ -1,7 +1,7 @@
 .generalTemplate--container {
   max-width: 100vw;
   width: 100%;
-  background-color: #edf6f5;
+  background-color: rgba(240, 250, 251, 0.2);
   height: auto;
 }
 
@@ -34,4 +34,5 @@ nav > div > ul > li {
   padding: 20px;
   cursor: pointer;
   font-size: 18px;
+  font-family: "Chivo", sans-serif;
 }

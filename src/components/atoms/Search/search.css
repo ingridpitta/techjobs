@@ -9,9 +9,11 @@ input {
   padding: 10px;
   padding-left: 20px;
   outline: none;
+   font-family: "Chivo", sans-serif;
 }
 
 input::placeholder {
   color: #bebebe;
   font-weight: normal;
+   font-family: "Chivo", sans-serif;
 }

@@ -6,8 +6,8 @@ const FilterOptions = ({ filters, onClick }) => {
     <div className="filterOptions--container" onClick={onClick}>
       {filters.map(filter => {
         return (
-          <div className="filterOptions--filter" id={filter.name}>
-            <h3>{filter.name}</h3>
+          <div className="filterOptions--filter" id={filter}>
+            <h3>{filter}</h3>
           </div>
         );
       })}
