@@ -28,7 +28,7 @@ nav > div > ul {
   align-items: center;
 }
 
-nav > div > ul > li {
+nav > div > ul > a > li {
   color: white;
   font-weight: bold;
   padding: 20px;

@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "../../images/logo.svg";
+import {Link} from "react-router-dom";
 import "./generalTemplate.css";
 
 const GeneralTemplate = ({ children }) => {
@@ -9,9 +10,15 @@ const GeneralTemplate = ({ children }) => {
         <div>
           <Logo />
           <ul>
-            <li>Home</li>
-            <li>Entrar</li>
-            <li>Cadastro</li>
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+            <Link to="/login">
+              <li>Entrar</li>
+            </Link>
+            <Link to="/signup">
+              <li>Cadastro</li>
+            </Link>
           </ul>
         </div>
       </nav>
