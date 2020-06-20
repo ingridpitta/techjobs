@@ -38,10 +38,10 @@ class Home extends Component {
 
   render() {
     const { title, filters, inputValue } = this.state;
-    const {data, getJobInfos} = this.props;
+    const {data, getJobInfos, loggedUser, logout } = this.props;
     console.log({ inputValue });
     return (
-      <GeneralTemplate>
+      <GeneralTemplate loggedUser={loggedUser} logout={logout} >
         <HomeContent
           title={title}
           handleFilters={this.handleFilters}

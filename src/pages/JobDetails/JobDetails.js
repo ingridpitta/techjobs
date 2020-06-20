@@ -11,9 +11,9 @@ class JobDetails extends Component {
   }
 
   render(){
-    const {data} = this.props;
+    const {data, loggedUser, logout} = this.props;
     return (
-      <GeneralTemplate>
+      <GeneralTemplate loggedUser={loggedUser} logout={logout}>
         <JobDetailsContent data={data}/>
       </GeneralTemplate>
     );

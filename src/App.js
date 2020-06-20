@@ -9,8 +9,9 @@ class App extends Component {
   constructor(){
     super();
 
-    this.staate={
-      filteredData: []
+    this.state={
+      filteredData: [],
+      loggedUser: false
     }
   }
 
@@ -25,13 +26,21 @@ class App extends Component {
     }
   }
 
+  login = () => {
+    this.setState({loggedUser: true});
+  }
+
+  logout = () => {
+    this.setState({loggedUser: false});
+  }
+
   render(){
     return (
     <Switch>
-      <Route exact path="/" render={props => <Home data={data} getJobInfos={this.getJobInfos} />} />
-      <Route exact path="/login" render={props => <Login/>}/>
-      <Route exact path="/signup" render={props => <SignUp/>}/>
-      <Route exact path="/job-details" render={props => <JobDetails {...props} data={this.state.filteredData}/>}/>
+      <Route exact path="/" render={props => <Home data={data} getJobInfos={this.getJobInfos} logout={this.logout} loggedUser={this.state.loggedUser}/>} />
+      <Route exact path="/login" render={props => <Login login={this.login} logout={this.logout} loggedUser={this.state.loggedUser}/>}/>
+      <Route exact path="/signup" render={props => <SignUp login={this.login} logout={this.logout} loggedUser={this.state.loggedUser}/>}/>
+      <Route exact path="/job-details" render={props => <JobDetails {...props} data={this.state.filteredData} logout={this.logout} loggedUser={this.state.loggedUser}/>}/>
     </Switch>
   );
   }
