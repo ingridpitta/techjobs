@@ -10,12 +10,12 @@ const RoleInfos = ({ role, level, languages, tools }) => {
       <div>
         <h2>{level}</h2>
       </div>
-      {languages.map(language => (
+      {languages && languages.map(language => (
         <div>
           <h2>{language}</h2>
         </div>
       ))}
-      {tools.map(tool => (
+      {tools && tools.map(tool => (
         <div>
           <h2>{tool}</h2>
         </div>

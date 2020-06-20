@@ -9,6 +9,7 @@ const HomeContent = ({
   handleFilters,
   handleChange,
   onClick,
+  getJobInfos,
   cardsInfo
 }) => {
   return (
@@ -42,11 +43,12 @@ const HomeContent = ({
             location={location}
             languages={languages}
             tools={tools}
-            key={id}
+            id={id}
+            onClick={getJobInfos}
           />
         );
       })}
     </main>
-  );
+  )
 };
 export default HomeContent;

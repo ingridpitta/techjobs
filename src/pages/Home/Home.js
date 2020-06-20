@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { GeneralTemplate } from "../../templates";
 import { HomeContent } from "../../components/organisms";
-import data from "../../data.json";
 import "./home.css";
 
 class Home extends Component {
@@ -36,8 +35,10 @@ class Home extends Component {
     console.log("clicked");
   };
 
+
   render() {
     const { title, filters, inputValue } = this.state;
+    const {data, getJobInfos} = this.props;
     console.log({ inputValue });
     return (
       <GeneralTemplate>
@@ -48,6 +49,7 @@ class Home extends Component {
           handleChange={this.handleChange}
           onClick={this.onClick}
           cardsInfo={data}
+          getJobInfos={getJobInfos}
         />
       </GeneralTemplate>
     );
