@@ -1,6 +1,7 @@
 .card--container {
   width: 75%;
   padding: 20px;
+  height: 200px;
   margin: 20px auto 50px auto;
   display: flex;
   flex-direction: row;

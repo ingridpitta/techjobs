@@ -1,0 +1,39 @@
+.signUpContent--container{
+    width: 40%;
+    margin: 100px auto 0 auto;
+    background-color: rgba(240, 250, 251, 0.2);
+}
+
+.signUpContent--container > h2{
+    width: 50%;
+    text-align: center;
+    color: #64babb;
+    font-size: 32px;
+    margin: 20px auto;
+}
+
+.signUpContent--container > .login-form{
+   height: 100vh;
+}
+
+.ant-form-item-control-input-content{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ant-btn, .login-form-button, .ant-btn-primary{
+    background-color: #64babb;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.ant-btn:hover, .login-form-button:hover, .ant-btn-primary:hover{
+    background-color: #498c8e;
+}
+
+.ant-form-item-control-input-content > a {
+    color: #64babb;
+    margin-left: 10px;
+    cursor: pointer;
+}

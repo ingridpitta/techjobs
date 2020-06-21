@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import { Form, Input, Button } from 'antd';
+import styles from 'antd/dist/antd.css' ;
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 const FormSignUp = ({onFinish}) => {
@@ -55,7 +56,7 @@ const FormSignUp = ({onFinish}) => {
         <Button type="primary" htmlType="submit" className="login-form-button">
           Cadastrar
         </Button>
-        Or <Link to="/login">Login</Link>
+        Ou <Link to="/login">Login</Link>
       </Form.Item>
     </Form>
   );

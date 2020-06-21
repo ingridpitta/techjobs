@@ -24,6 +24,7 @@ a {
 .searchBar--btn:active {
   background-color: #498c8e;
   font-family: "Chivo", sans-serif;
+ 
 }
 
 .confirm--btn {
@@ -40,6 +41,10 @@ a {
   outline: none;
 }
 
+.confirm--btn:hover{
+   color: white;
+}
+
 .cancel--btn {
   color: #64babb;
   background-color: #edf6f5;
@@ -52,4 +57,8 @@ a {
   z-index: 5;
   cursor: pointer;
   outline: none;
+}
+
+.cancel--btn:hover{
+   color: #64babb;
 }
