@@ -3,7 +3,7 @@ import "./search.css";
 
 const Search = ({ placeholder, value, handleChange }) => {
   return (
-    <input placeholder={placeholder} value={value} onChange={handleChange} />
+    <input placeholder={placeholder} value={value} onChange={handleChange}/>
   );
 };
 

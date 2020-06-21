@@ -10,12 +10,13 @@ const HomeContent = ({
   handleChange,
   onClick,
   getJobInfos,
-  cardsInfo
+  cardsInfo,
+  value,
 }) => {
   return (
     <main className="homeContent--container">
       <MainTitle title={title} />
-      <SearchBar handleChange={handleChange} onClick={onClick} />
+      <SearchBar handleChange={handleChange} onClick={onClick} value={value} />
       <FilterBar filters={filters} onClick={handleFilters} />
       {cardsInfo.map(data => {
         const {

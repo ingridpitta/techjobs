@@ -3,11 +3,11 @@ import "./filterOptions.css";
 
 const FilterOptions = ({ filters, onClick }) => {
   return (
-    <div className="filterOptions--container" onClick={onClick}>
+    <div className="filterOptions--container">
       {filters.map(filter => {
         return (
-          <div className="filterOptions--filter" id={filter}>
-            <h3>{filter}</h3>
+          <div className="filterOptions--filter" id={filter} onClick={onClick}>
+            <h3 id={filter}>{filter}</h3>
           </div>
         );
       })}

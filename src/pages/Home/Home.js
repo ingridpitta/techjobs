@@ -23,12 +23,30 @@ class Home extends Component {
     };
   }
 
-  handleFilters = () => {
-    console.log("filtering");
+  handleFilters = async (e) => {
+    const {data} = this.props;
+    const value = e.target.id.toLowerCase();
+
+    const arrData = Object.assign(data);
+
+    await this.arrToLowerCase(arrData);
+
+    const result = await arrData.filter(job => {
+      switch (value) {
+        case "todos":
+          return arrData.map(item => item);
+          break;
+        default:
+        return job.position.includes(value);
+      }
+    });
+
+    this.setState({data: result});
   };
 
   handleChange = e => {
     const value = e.target.value;
+
     this.setState({ inputValue: value });
   };
 
@@ -55,15 +73,14 @@ class Home extends Component {
     await this.arrToLowerCase(mutatedData);
 
     const search = await mutatedData.filter(job => job.position.includes(inputValue.toLowerCase()));
-    
-    this.setState({data: search});
+
+    this.setState({data: search, inputValue: ""});
   };
 
 
   render() {
     const { title, filters, inputValue, data } = this.state;
     const {getJobInfos, loggedUser, logout } = this.props;
-    console.log({ inputValue });
     return (
       <GeneralTemplate loggedUser={loggedUser} logout={logout} >
         <HomeContent
@@ -74,6 +91,7 @@ class Home extends Component {
           onClick={this.onClick}
           cardsInfo={data}
           getJobInfos={getJobInfos}
+          value={inputValue}
         />
       </GeneralTemplate>
     );
