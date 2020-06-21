@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {withRouter} from "react-router-dom";
 import { GeneralTemplate } from "../../templates";
 import { JobDetailsContent } from "../../components/organisms";
 import "./jobDetails.css";
@@ -20,4 +21,4 @@ class JobDetails extends Component {
   }
 }
 
-export default JobDetails;
+export default withRouter(JobDetails);

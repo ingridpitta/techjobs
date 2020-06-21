@@ -4,9 +4,9 @@ import "./filterOptions.css";
 const FilterOptions = ({ filters, onClick }) => {
   return (
     <div className="filterOptions--container">
-      {filters.map(filter => {
+      {filters.map((filter, index) => {
         return (
-          <div className="filterOptions--filter" id={filter} onClick={onClick}>
+          <div className="filterOptions--filter" id={filter} onClick={onClick} key={`${index + 1}--options`}>
             <h3 id={filter}>{filter}</h3>
           </div>
         );

@@ -18,7 +18,8 @@ const HomeContent = ({
       <MainTitle title={title} />
       <SearchBar handleChange={handleChange} onClick={onClick} value={value} />
       <FilterBar filters={filters} onClick={handleFilters} />
-      {cardsInfo.map(data => {
+      {cardsInfo.length ? cardsInfo.map((data, index) => {
+        const key=index;
         const {
           company,
           role,
@@ -30,7 +31,7 @@ const HomeContent = ({
           location,
           languages,
           tools,
-          id
+          id,
         } = data;
         return (
           <Card
@@ -45,10 +46,14 @@ const HomeContent = ({
             languages={languages}
             tools={tools}
             id={id}
+            key={key + 1}
             onClick={getJobInfos}
           />
         );
-      })}
+      }) : 
+      <div className="homeContent--noJobs">
+        <h1>Nenhuma vaga encontrada</h1>
+      </div>}
     </main>
   )
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { MainTitle } from "../../atoms";
-import { Card } from "../../molecules";
+import { CardDetails } from "../../molecules";
 import "./jobDetailsContent.css";
 
 const JobDetailsContent = ({data}) => {
@@ -14,11 +14,12 @@ const JobDetailsContent = ({data}) => {
   location,
   languages,
   tools,
+  onClick,
   id} = data;
   
   return (
     <main className="jobDetailsContent--container">
-       <Card
+       <CardDetails
             company={company}
             role={role}
             logo={logo}
@@ -30,6 +31,8 @@ const JobDetailsContent = ({data}) => {
             languages={languages}
             tools={tools}
             id={id}
+            onClick={onClick}
+            key={`${id + 1}`}
           />
     </main>
   );

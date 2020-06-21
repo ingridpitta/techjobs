@@ -7,10 +7,11 @@ const CompanyInfos = ({
   position,
   postedAt,
   contract,
-  location
+  location,
+  key
 }) => {
   return (
-    <div className="company--infos">
+    <div className="company--infos" key={`${key}--company`}>
       <img src={logo} alt={`${company}-logo`} />
       <div className="role--details">
         <h3>{company}</h3>
