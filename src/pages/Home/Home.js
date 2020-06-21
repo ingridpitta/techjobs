@@ -24,7 +24,7 @@ class Home extends Component {
   }
 
   handleFilters = async (e) => {
-    const {data} = this.props;
+    const { data } = this.props;
     const value = e.target.id.toLowerCase();
 
     const result = await data.filter(job => {
@@ -48,7 +48,7 @@ class Home extends Component {
 
   onClick = async () => {
     const { inputValue } = this.state;
-    const {data} = this.props;
+    const { data } = this.props;
 
     const search = await data.filter(job => job.position.toLowerCase().includes(inputValue.toLowerCase()));
 
