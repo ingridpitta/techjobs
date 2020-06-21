@@ -27,17 +27,13 @@ class Home extends Component {
     const {data} = this.props;
     const value = e.target.id.toLowerCase();
 
-    const arrData = Object.assign(data);
-
-    await this.arrToLowerCase(arrData);
-
-    const result = await arrData.filter(job => {
+    const result = await data.filter(job => {
       switch (value) {
         case "todos":
-          return arrData.map(item => item);
+          return data.map(item => item);
           break;
         default:
-        return job.position.includes(value);
+        return job.position.toLowerCase().includes(value);
       }
     });
 
@@ -50,29 +46,11 @@ class Home extends Component {
     this.setState({ inputValue: value });
   };
 
-  arrToLowerCase = (arr) => {
-    for (let i = 0 ; i < arr.length; i++){
-    for (let key in arr[i]){
-        if (key === undefined || arr[i][key] === undefined) {
-            continue;
-        }
-          const item = arr[i][key];
-          if(!Array.isArray(item)){
-            arr[i][key] = arr[i][key].toString().toLowerCase();
-          }
-        };
-    };
-  }
-
   onClick = async () => {
     const { inputValue } = this.state;
     const {data} = this.props;
 
-    const mutatedData = Object.assign(data);
-
-    await this.arrToLowerCase(mutatedData);
-
-    const search = await mutatedData.filter(job => job.position.includes(inputValue.toLowerCase()));
+    const search = await data.filter(job => job.position.toLowerCase().includes(inputValue.toLowerCase()));
 
     this.setState({data: search, inputValue: ""});
   };
