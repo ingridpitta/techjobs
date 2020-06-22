@@ -35,14 +35,14 @@ Um Router permite que a aplicação navegue entre diferentes componentes, mudand
 
 O React Router é baseado em três componentes principais:
 
- Router - Mantém a Interface do Usuário (UI) sincronizada com a URL.
- Link - Renderiza um link de navegação (uma tag <a></a> que muda a URL sem dar refresh na página).
- Route - Renderiza um componente de acordo com a URL.
+ - Router - Mantém a Interface do Usuário (UI) sincronizada com a URL.
+ - Link - Renderiza um link de navegação (uma tag <a></a> que muda a URL sem dar refresh na página).
+ - Route - Renderiza um componente de acordo com a URL.
   
 Em relação às implementações do Router podemos escolher entre duas:
 
-- <BrowserRouter> - Usa History API.
-- <HashRouter> - Usa hash presente na URL (obs: browser antigos).
+ - BrowserRouter - Usa History API.
+ - HashRouter - Usa hash presente na URL (obs: browser antigos).
 
 ## Links 
 
